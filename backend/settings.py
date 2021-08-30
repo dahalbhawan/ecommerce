@@ -178,7 +178,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'frontend/build/static'
 ]
 MEDIA_ROOT = BASE_DIR / 'static/images'
-MEDIA_URL = '/images/'
+MEDIA_URL = 'static/images/'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
