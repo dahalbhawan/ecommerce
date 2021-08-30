@@ -1,0 +1,1 @@
+web: gnuicorn backend.wsgi --log-file-

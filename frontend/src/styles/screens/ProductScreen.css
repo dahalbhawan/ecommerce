@@ -1,0 +1,8 @@
+.product {
+    background-color: white;
+    padding: 20px;
+}
+
+.product__details {
+    height: 100%;
+}
