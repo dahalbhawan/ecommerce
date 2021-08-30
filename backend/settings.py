@@ -183,6 +183,3 @@ MEDIA_URL = 'static/images/'
 CORS_ALLOW_ALL_ORIGINS = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-print('STATIC', STATIC_ROOT)
-print('MEDIA', MEDIA_ROOT)
