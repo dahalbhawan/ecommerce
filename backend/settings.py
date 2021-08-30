@@ -27,7 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('MYSHOP_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.getcwd() == '/app':
+    DEBUG = False
+else: 
+    DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'djreact-shop.herokuapp.com']
 
@@ -94,8 +97,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEMPLATES = [
     {
@@ -181,8 +182,4 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-if os.getcwd() == '/app':
-    DEBUG = False
-
-print(DEBUG)
-print(os.getcwd())
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
