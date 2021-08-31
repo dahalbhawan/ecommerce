@@ -19,7 +19,7 @@ function Product({ product }) {
             <Card.Body className="p-0 mt-2">
                 <Link to={`/products/${product._id}`}>
                     <Card.Title>
-                        <strong>{(product.name).slice(0,25)}</strong>
+                        <strong>{(product.name)?.slice(0,25)}</strong>
                         <small><Rating value={product.rating} text={`${product.numReviews} reviews`} color={"#f8e825"} /></small>
                     </Card.Title>
                 </Link>
